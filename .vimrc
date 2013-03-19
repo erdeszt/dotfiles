@@ -1,0 +1,15 @@
+set autoread
+set ignorecase
+set hlsearch
+set showmatch
+syntax enable
+set encoding=utf8
+set nobackup
+set nowb
+set noswapfile
+set expandtab
+set smarttab
+set shiftwidth=2
+set tabstop=2
+set ai
+set si
