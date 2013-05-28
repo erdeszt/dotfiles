@@ -7,6 +7,7 @@
   co = checkout
   cob = checkout -b
   st = status --short
+  ss = status
   dic = diff --cached
   br = branch
   ci = commit
@@ -18,6 +19,7 @@
   lg = log --pretty=\"%h (%an) %s\" --graph
   llg = log --stat --pretty=\"\n--== %s ==--\n%an (%h) at %ad\" 
   aa = !git add . && git status --short
+  au = !git add -u && git status --short
 [color]
   diff = true
   status = true
