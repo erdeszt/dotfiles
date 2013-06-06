@@ -13,3 +13,12 @@ set shiftwidth=2
 set tabstop=2
 set ai
 set si
+
+" resize current buffer by +/- 5
+nnoremap <C-h> :vertical resize -5<cr>
+nnoremap <C-j> :resize +5<cr>
+nnoremap <C-k> :resize -5<cr>
+nnoremap <C-l> :vertical resize +5<cr>
+
+" Fuzzy finder shortcut
+nnoremap <C-p> :FufFile<cr>
