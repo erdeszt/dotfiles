@@ -12,6 +12,7 @@
   br = branch
   ci = commit
   pu = push
+  po = push origin
   fe = fetch
   feo = fetch origin
   me = merge
