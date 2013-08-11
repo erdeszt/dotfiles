@@ -30,3 +30,6 @@ nnoremap <Tab> <C-W>w
 
 " Ruby style comment on 
 nnoremap <C-/> 0i#<Esc>
+
+" Slim files
+au BufNewFile,BufRead *.slim setlocal ft=slim
