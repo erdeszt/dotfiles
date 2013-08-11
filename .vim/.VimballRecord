@@ -1,0 +1,1 @@
+haskellmode.vba: call delete('/home/erdeszt/.vim/compiler/ghc.vim  [[[1')|call delete('/home/erdeszt/.vim/ftplugin/haskell.vim  [[[1')|call delete('/home/erdeszt/.vim/ftplugin/haskell_doc.vim  [[[1')|call delete('/home/erdeszt/.vim/ftplugin/haskell_hpaste.vim [[[1')|call delete('/home/erdeszt/.vim/doc/haskellmode.txt [[[1')
