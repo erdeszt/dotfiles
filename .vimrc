@@ -23,7 +23,7 @@ nnoremap <C-k> :resize -5<cr>
 nnoremap <C-l> :vertical resize +5<cr>
 
 " Fuzzy finder shortcut
-nnoremap <C-p> :FufFile<cr>
+nnoremap <C-p> :FufTaggedFile<cr>
 
 " Tab navigation between panes
 nnoremap <Tab> <C-W>w
