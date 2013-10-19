@@ -1,41 +1,53 @@
+set ai
 set autoread
-set ignorecase
-set hlsearch
-set showmatch
-syntax enable
 set encoding=utf8
-set nobackup
-set nowb
-set noswapfile
 set expandtab
-set smarttab
+set hlsearch
+set ignorecase
+set nobackup
+set noswapfile
+set nowb
+set nu
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
-set ai
+set showmatch
 set si
-set splitbelow
-set splitright
+set smarttab
+set tabstop=2
+set softtabstop=2
+set ruler
+set background=dark
+syntax enable
 
-" resize current buffer by +/- 5
-nnoremap <C-h> :vertical resize -5<cr>
-nnoremap <C-j> :resize +5<cr>
-nnoremap <C-k> :resize -5<cr>
-nnoremap <C-l> :vertical resize +5<cr>
+" Solarized colorscheme
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " Fuzzy finder shortcut
 nnoremap <C-p> :FufTaggedFile<cr>
 nnoremap <C-t> :FufTag<cr>
 
+" Save/quit shortcuts
+nnoremap ww :w<cr>
+nnoremap wq :wq<cr>
+nnoremap qq :q<cr> 
+imap qq <Esc> 
+
 " Tab navigation between panes
 nnoremap <Tab> <C-W>w
 
-" Ruby style comment on 
-nnoremap <C-/> 0i#<Esc>
+" resize shortcuts
+nnoremap <C-h> :vertical resize -5<cr>
+nnoremap <C-l> :vertical resize +5<cr>
+nnoremap <C-j> :resize +5<cr>
+nnoremap <C-k> :resize -5<cr>
 
-" Slim files
+au BufNewFile,BufRead *.twig setlocal ft=html
 au BufNewFile,BufRead *.slim setlocal ft=slim
+au BufRead,BufNewFile *.elm setlocal ft=haskell
 
-" Neocomplcache
-let g:neocomplcache_enable_at_startup = 1 
+" Autocomplete
+let g:neocomplcache_enable_at_startup = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>" 
+
