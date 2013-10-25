@@ -33,6 +33,7 @@ nnoremap ww :w<cr>
 nnoremap wq :wq<cr>
 nnoremap qq :q<cr> 
 imap qq <Esc> 
+map ss ysiw
 
 " Tab navigation between panes
 nnoremap <Tab> <C-W>w
