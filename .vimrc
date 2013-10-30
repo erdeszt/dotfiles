@@ -37,6 +37,7 @@ map ss ysiw
 
 " Tab navigation between panes
 nnoremap <Tab> <C-W>w
+nnoremap ,, :tabn<cr>
 
 " resize shortcuts
 nnoremap <C-h> :vertical resize -5<cr>
