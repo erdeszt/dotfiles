@@ -54,5 +54,4 @@ let g:neocomplcache_enable_at_startup = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>" 
 
 " Open NERDTree on startup and mirror it to new tabs
-autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
