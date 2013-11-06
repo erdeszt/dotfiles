@@ -20,36 +20,42 @@ set ruler
 set background=dark
 syntax enable
 
-" Solarized colorscheme
-let g:solarized_termcolors=256
-colorscheme solarized
-
-" Fuzzy finder shortcut
-nnoremap <C-p> :FufTaggedFile<cr>
-nnoremap <C-t> :FufTag<cr>
-
-" Save/quit shortcuts
-nnoremap ww :w<cr>
-nnoremap wq :wq<cr>
-map ss ysiw
-
-" Tab navigation between panes
-nnoremap <Tab> <C-W>w
-nnoremap ,, :tabn<cr>
-
-" resize shortcuts
-nnoremap <C-h> :vertical resize -5<cr>
-nnoremap <C-l> :vertical resize +5<cr>
-nnoremap <C-j> :resize +5<cr>
-nnoremap <C-k> :resize -5<cr>
-
-au BufNewFile,BufRead *.twig setlocal ft=html
-au BufNewFile,BufRead *.slim setlocal ft=slim
-au BufRead,BufNewFile *.elm setlocal ft=haskell
+let mapleader = ';'
 
 " Autocomplete
 let g:neocomplcache_enable_at_startup = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>" 
 
+" Colors
+let g:solarized_termcolors=256
+colorscheme solarized
+
 " Open NERDTree on startup and mirror it to new tabs
 autocmd BufEnter * NERDTreeMirror
+
+" File types
+au BufNewFile,BufRead *.twig setlocal ft=html
+au BufNewFile,BufRead *.slim setlocal ft=slim
+au BufRead,BufNewFile *.elm setlocal ft=haskell
+au BufRead,BufNewFile *.ko setlocal ft=html
+
+" Shortcuts
+nnoremap ww :w<cr>
+nnoremap wq :wq<cr>
+nnoremap qq :q<cr> 
+
+nnoremap <Tab> <C-W>w
+
+nnoremap <C-h> :vertical resize -5<cr>
+nnoremap <C-l> :vertical resize +5<cr>
+nnoremap <C-j> :resize +5<cr>
+nnoremap <C-k> :resize -5<cr>
+
+nnoremap <Leader>n :NERDTree<cr>
+nnoremap <Leader>j :tabp<cr>
+nnoremap <Leader>k :tabn<cr>
+
+nnoremap <C-p> :FufTaggedFile<cr>
+nnoremap <C-t> :FufTag<cr>
+
+map ss ysiw
