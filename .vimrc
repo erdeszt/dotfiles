@@ -30,7 +30,7 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:solarized_termcolors=256
 colorscheme solarized
 
-" Open NERDTree on startup and mirror it to new tabs
+" Mirror NERDTree on new tabs
 autocmd BufEnter * NERDTreeMirror
 
 " File types
