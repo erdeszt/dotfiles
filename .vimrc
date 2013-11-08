@@ -54,7 +54,8 @@ nnoremap <C-k> :resize -5<cr>
 nnoremap <Leader>n :NERDTree<cr>
 nnoremap <Leader>j :tabp<cr>
 nnoremap <Leader>k :tabn<cr>
-nnoremap <Leader>a :Ack 
+nnoremap <Leader>a :Ack
+nnoremap <Leader>s :%s/\s\+$//g<cr>:w<cr>
 
 nnoremap <C-p> :FufTaggedFile<cr>
 nnoremap <C-t> :FufTag<cr>
