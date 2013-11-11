@@ -46,4 +46,5 @@ if [ "$TMUX" = "" ]; then tmux -2; fi
 alias e='subl . &'
 alias grep='egrep'
 alias la='ls -al'
+alias cat='less'
 
