@@ -38,6 +38,7 @@ au BufNewFile,BufRead *.twig setlocal ft=html
 au BufNewFile,BufRead *.slim setlocal ft=slim
 au BufRead,BufNewFile *.elm setlocal ft=haskell
 au BufRead,BufNewFile *.ko setlocal ft=html
+au BufRead,BufNewFile *.less setlocal ft=css
 
 " Shortcuts
 nnoremap ww :w<cr>
