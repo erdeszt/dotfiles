@@ -14,8 +14,6 @@ set softtabstop=2
 set showmatch
 set si
 set smarttab
-set tabstop=2
-set softtabstop=2
 set ruler
 set background=dark
 syntax enable
