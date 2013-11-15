@@ -16,6 +16,7 @@ set si
 set smarttab
 set ruler
 set background=dark
+set cursorline
 syntax enable
 
 let mapleader = ';'
