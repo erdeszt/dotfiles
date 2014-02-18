@@ -47,4 +47,5 @@ alias e='subl . &'
 alias grep='egrep'
 alias la='ls -al'
 alias cat='less'
+alias ack='ack-grep'
 
