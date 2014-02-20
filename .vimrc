@@ -43,6 +43,7 @@ au BufRead,BufNewFile *.less setlocal ft=css
 nnoremap ww :w<cr>
 nnoremap wq :wq<cr>
 nnoremap qq :q<cr> 
+inoremap jj <Esc>
 
 nnoremap <Tab> <C-W>w
 
