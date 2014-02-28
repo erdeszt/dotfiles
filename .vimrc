@@ -31,7 +31,7 @@ let g:solarized_termcolors=256
 colorscheme solarized
 
 " Mirror NERDTree on new tabs
-autocmd BufEnter * NERDTreeMirror
+" autocmd BufEnter * NERDTreeMirror
 
 " File types
 au BufNewFile,BufRead *.twig setlocal ft=html
