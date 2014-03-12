@@ -45,7 +45,7 @@ nnoremap ww :w<cr>
 nnoremap wq :wq<cr>
 nnoremap qq :q<cr> 
 inoremap jj <Esc>:w<cr>
-imap ww jja
+inoremap ww <Esc>:w<cr>a
 
 nnoremap <Tab> <C-W>w
 
