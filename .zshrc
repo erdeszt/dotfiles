@@ -41,6 +41,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/home/erdeszt/.rvm/gems/jruby-1.7.3/bin:/home/erdeszt/.rvm/gems/jruby-1.7.3@global/bin:/home/erdeszt/.rvm/rubies/jruby-1.7.3/bin:/home/erdeszt/.rvm/bin:/home/erdeszt/programs/play:/home/erdeszt/programs/play:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/erdeszt/bin:/usr/local/java/jdk1.7.0_10/bin:/home/erdeszt/bin:/usr/local/java/jre1.7.0_10/bin:/home/erdeszt/.rvm/bin:/home/erdeszt/.cabal/bin
 
+export EDITOR='vim'
+
 if [ "$TMUX" = "" ]; then tmux -2; fi
 
 alias e='subl . &'
@@ -49,3 +51,4 @@ alias la='ls -al'
 alias cat='less'
 alias ack='ack-grep'
 
+source ~/tmuxinator.zsh
