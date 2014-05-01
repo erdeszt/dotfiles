@@ -1,2 +1,2 @@
---type-set=html=.ko
---type-set=haskell=.elm
+--type-add=html=.ko
+--type-add=haskell=.elm
