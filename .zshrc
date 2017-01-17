@@ -51,4 +51,6 @@ alias la='ls -al'
 alias cat='less'
 alias ack='ack-grep'
 
-source ~/tmuxinator.zsh
+if ! ssh-add -l | grep erdeszt > /dev/null; then
+  ssh-add -K ~/.ssh/id_rsa
+fi
