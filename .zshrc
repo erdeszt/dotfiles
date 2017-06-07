@@ -39,6 +39,8 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/erdeszt/bin
+
 export EDITOR='vim'
 
 if [ "$TMUX" = "" ]; then tmux -2; fi
@@ -47,7 +49,6 @@ alias e='subl . &'
 alias grep='egrep'
 alias la='ls -al'
 alias cat='less'
-alias ack='ack-grep'
 
 if ! ssh-add -l | grep erdeszt > /dev/null; then
   ssh-add -K ~/.ssh/id_rsa
