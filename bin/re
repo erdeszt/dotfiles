@@ -14,10 +14,12 @@ if [ $? -eq 1 ]; then
   git rebase origin/master
 fi
 
-echo '# Refreshing master branch'
-git checkout master
-git rebase origin/master
-git checkout $CURRENT_BRANCH
+if [ "$CURRENT_BRANCH" != "master" ]; then
+  echo '# Refreshing master branch'
+  git checkout master
+  git rebase origin/master
+  git checkout $CURRENT_BRANCH
+fi
 
 if [ $STASHED_CURRENT_BRANCH -eq 1 ]; then
   echo '# Restoring changes'
