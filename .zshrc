@@ -39,7 +39,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/erdeszt/bin
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:~/bin
 
 export EDITOR='vim'
 
@@ -50,6 +50,6 @@ alias grep='egrep'
 alias la='ls -al'
 alias cat='less'
 
-if ! ssh-add -l | grep erdeszt > /dev/null; then
+if ! ssh-add -l | grep ${USER} > /dev/null; then
   ssh-add -K ~/.ssh/id_rsa
 fi
