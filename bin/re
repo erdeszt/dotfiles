@@ -19,6 +19,7 @@ if [ "$CURRENT_BRANCH" != "master" ]; then
   git checkout master
   git rebase origin/master
   git checkout $CURRENT_BRANCH
+  git rebase origin/$CURRENT_BRANCH
 fi
 
 if [ $STASHED_CURRENT_BRANCH -eq 1 ]; then
