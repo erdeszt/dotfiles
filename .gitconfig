@@ -3,6 +3,8 @@
   email = erdeszt@gmail.com
 [core]
   editor = vim
+[pager]
+  branch = false
 [alias]
   co = checkout
   cob = checkout -b
