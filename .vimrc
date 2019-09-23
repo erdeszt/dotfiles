@@ -18,6 +18,7 @@ set ruler
 set background=dark
 set cursorline
 set scrolloff=2
+set visualbell
 syntax enable
 
 let mapleader = ';'
