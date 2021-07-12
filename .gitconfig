@@ -9,16 +9,11 @@
   co = checkout
   cob = checkout -b
   st = status --short
-  ss = status
   dic = diff --cached
   br = branch
   ci = commit
-  pu = push
   po = push origin
-  fe = fetch
   feo = fetch origin
-  me = merge
-  re = rebase
   lg = log --pretty=\"%h (%an) %s\" --graph
   llg = log --stat --pretty=\"\n--== %s ==--\n%an (%h) at %ad\" 
   aa = !git add . && git status --short
