@@ -4,7 +4,7 @@ Dotfiles
 Install utils:
 
 ```
-sudo apt-get install zsh tmux vim mc git curl ssh ack-grep
+sudo apt-get install zsh tmux vim mc git curl ssh silversearcher-ag fzf
 ```
 
 Install ZSH:
