@@ -1,0 +1,14 @@
+shell:
+  program: wsl.exe
+
+window:
+  decorations: none
+  startup_mode: fullscreen
+
+colors:
+  primary:
+    background: "#352896"
+    foreground: "#cce0db"
+
+font:
+  size: 16
