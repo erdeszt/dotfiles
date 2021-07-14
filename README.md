@@ -7,7 +7,7 @@ Install utils:
 sudo apt-get install zsh tmux vim mc git curl ssh silversearcher-ag fzf
 ```
 
-Install ZSH:
+Install Oh my ZSH:
 
 ```
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
