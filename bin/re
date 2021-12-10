@@ -1,0 +1,32 @@
+#!/bin/bash
+
+CURRENT_BRANCH="$(git branch | grep '^\*' | sed 's/\* //g')"
+STASHED_CURRENT_BRANCH="0"
+MAIN_BRANCH="master"
+
+if [[ "$1" ]]; then
+  MAIN_BRANCH="$1"
+fi
+
+echo '# Refreshing current branch'
+git fetch origin
+git rebase origin/"$MAIN_BRANCH"
+
+if [ $? -eq 1 ]; then
+  echo '# Stashing changes'
+  STASHED_CURRENT_BRANCH=1
+  git stash
+  git rebase origin/"$MAIN_BRANCH"
+fi
+
+if [ "$CURRENT_BRANCH" != "$MAIN_BRANCH" ]; then
+  echo "# Refreshing $MAIN_BRANCH branch"
+  git checkout $MAIN_BRANCH
+  git rebase origin/"$MAIN_BRANCH"
+  git checkout $CURRENT_BRANCH
+fi
+
+if [ $STASHED_CURRENT_BRANCH -eq 1 ]; then
+  echo '# Restoring changes'
+  git stash pop
+fi

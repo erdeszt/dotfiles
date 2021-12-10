@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Copy dotfolders
+$(find . -maxdepth 1 -type d \
+  | grep -v '^\.\/\.git$'    \
+  | grep -v '^\.$'       \
+  | xargs -i cp -r '{}' ~/)
+
+# Copy dotfiles
+$(find . -maxdepth 1 -type f \
+  | grep '\.\/\..*'          \
+  | xargs -i cp '{}' ~/)
+

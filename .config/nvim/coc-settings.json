@@ -1,0 +1,5 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["scala"],
+  "metals.statusBarEnabled": true,
+  "codeLens.enable": true
+}

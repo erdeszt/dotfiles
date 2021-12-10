@@ -1,0 +1,25 @@
+[user]
+  name = erdeszt
+  email = erdeszt@users.noreply.github.com
+[core]
+  editor = vim
+[pager]
+  branch = false
+[alias]
+  co = checkout
+  cob = checkout -b
+  st = status --short
+  dic = diff --cached
+  br = branch
+  ci = commit
+  po = push origin
+  feo = fetch origin
+  lg = log --pretty=\"%h (%an) %s\" --graph
+  llg = log --stat --pretty=\"\n--== %s ==--\n%an (%h) at %ad\" 
+  aa = !git add . && git status --short
+  au = !git add -u && git status --short
+[color]
+  diff = true
+  status = true
+  branch = true
+  interactive = true
