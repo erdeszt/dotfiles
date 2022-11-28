@@ -121,12 +121,16 @@ nnoremap      <silent> <Leader>f :NERDTreeFind<cr>
 nmap          <silent> [g <cmd>lua vim.lsp.diagnostic.goto_prev { wrap = false }<cr>
 nmap          <silent> ]g <cmd>lua vim.lsp.diagnostic.goto_next { wrap = false }<cr>
 nmap          <leader>R <cmd>lua vim.lsp.buf.rename()<cr>
+nnoremap      <Leader>l <cmd>lua vim.lsp.codelens.run()<cr>
+nnoremap <Leader>f <cmd>lua vim.lsp.buf.formatting()<cr>
 
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 nnoremap <Leader><Leader>f :Ag<space>
 nnoremap <Leader><Leader>l :Lines<cr>
 nnoremap <Leader><Leader>h :History<cr>
+
+autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()
 
 lua <<EOF
   -- Set up nvim-cmp.
