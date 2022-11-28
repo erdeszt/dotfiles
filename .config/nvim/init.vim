@@ -1,11 +1,11 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'nvim-lua/plenary.nvim'
 Plug 'scrooloose/nerdtree'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'neovim/nvim-lspconfig'
 Plug 'easymotion/vim-easymotion'
+Plug 'scalameta/nvim-metals'
 Plug 'vim-airline/vim-airline'
 Plug 'ajmwagar/vim-deus'
 Plug 'tpope/vim-fugitive'
@@ -61,21 +61,27 @@ nnoremap <Leader>e :e!<cr>
 
 nnoremap <C-p> :GFiles<cr>
 
-nmap <silent> <Leader>d <Plug>(coc-definition)
-nmap <silent> <Leader>D <Plug>(coc-type-definition)
-nmap <silent> <Leader>I <Plug>(coc-implementation)
-nmap <silent> <Leader>r <Plug>(coc-references)
-nmap <silent> <Leader>f :call CocAction('format')<cr>
-nnoremap <silent> <Leader>i :call CocAction('doHover')<cr>
-nnoremap <silent> <Leader>E :CocDiagnostics<cr>
-nnoremap <silent> <Leader>f :NERDTreeFind<cr>
+:lua << EOF
+  local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
+  vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "scala", "sbt", "java" },
+    callback = function()
+      require("metals").initialize_or_attach({})
+    end,
+    group = nvim_metals_group,
+  })
+EOF
 
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> <Leader>d <cmd>lua vim.lsp.buf.definition()<cr>
+nmap <silent> <Leader>I <cmd>lua vim.lsp.buf.implementation()<CR>
+nmap <silent> <Leader>r <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap      <Leader>i <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap      <silent> <Leader>. <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap      <silent> <Leader>f :NERDTreeFind<cr>
+nmap          <silent> [g <cmd>lua vim.lsp.diagnostic.goto_prev { wrap = false }<cr>
+nmap          <silent> ]g <cmd>lua vim.lsp.diagnostic.goto_next { wrap = false }<cr>
+nmap          <leader>R <cmd>lua vim.lsp.buf.rename()<cr>
 
-nmap <leader>R <Plug>(coc-rename)
-
-nmap <leader>.  <Plug>(coc-codeaction)
 
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <TAB>
